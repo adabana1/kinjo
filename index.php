@@ -1,5 +1,5 @@
 <?php
 
-header('Location: /htdocs/user_create.php');
+require_once '/htdocs/user_create.php';
 
 ?>
