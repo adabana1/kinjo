@@ -21,7 +21,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">トレーニング記録<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../htdocs/new_community.php">コミュニティ作成<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="../htdocs/communities.php">コミュニティ一覧</a>
@@ -47,29 +47,53 @@
 
         <div class="col-sm-12 user_container">
         <!--ユーザー名-->
-            <h1 class="user_name"><?php print $user_name; ?></h1>
-          
-            <!--自己紹介文-->
-            <div class="introduction text-center">
-                <p class="lead text-muted"><?php print $value['profile']; ?></p>
-            </div>
-            <!--プロフィール編集-->
-                <!--ユーザー自身の場合、プロフィール編集ボタン-->
-                <div class="text-center">
-                  <button type="button" class="btn btn-primary btn-lg mt-2 mb-2">
-                      <a href="../htdocs/edit_profile.php"><font color="#FFF">プロフィール編集</font></a>
-                  </button>
-                </div>
-
-            <!--過去に作成したコミュニティ一覧の表示-->
-            <div class="community_container text-center">
-                <p class="community">過去に作成したコミュニティ</p>            
-            </div>
+          <h1 class="user_name"><?php print $user_name; ?></h1>
+        
+          <!--自己紹介文-->
+          <div class="introduction text-center">
+              <p class="lead text-muted"><?php print $value['profile']; ?></p>
+          </div>
+          <!--プロフィール編集-->
+          <!--ユーザー自身の場合、プロフィール編集ボタン-->
+          <div class="text-center">
+            <button type="button" class="btn btn-primary btn-lg mt-2 mb-2">
+                <a href="../htdocs/edit_profile.php"><font color="#FFF">プロフィール編集</font></a>
+            </button>
+          </div>
         </div>
 
-        <?php } ?>
+      <?php } ?>
+
     </div>
-</div>
+
+    <!--過去に作成したコミュニティ一覧の表示-->
+    <div class="community_container text-center">
+        <br><p class="community">過去に作成したコミュニティ</p>
+    </div>
+
+    <?php if (count($my_communities_data) !== 0){ ?>
+    <?php foreach($my_communities_data as $value){ ?>
+
+    <!--コミュニティ一覧-->
+    <form action="../htdocs/reply.php">
+      <div class="item_all">
+        <a class="hover text-decoration-none" name="" href="../htdocs/reply.php?community_id=<?php print $value['community_id']?>">
+            <div class="community_item">
+                <div class="community_title">
+                  <p>作成日時：<?php print $value['created_at'] ?><br>
+                  エリア：<?php print $value['area'] ?><br>
+                  タイトル：<?php print $value['title'] ?></p>
+                </div>
+
+                <div class="community_detail">
+                  <?php print $value['community_detail'] ?>
+                </div>
+            </div>
+        </a>
+      </div>
+    </form>
+    <?php }} ?> 
+  </div>
 
 
         </div>

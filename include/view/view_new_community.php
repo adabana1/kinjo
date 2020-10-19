@@ -74,7 +74,7 @@ $area = [
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                    <a class="nav-link" href="#">トレーニング記録<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../htdocs/new_community.php">コミュニティ作成<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                     <a class="nav-link" href="../htdocs/communities.php">コミュニティ一覧</a>

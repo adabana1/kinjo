@@ -22,8 +22,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                    <a class="nav-link" href="#">トレーニング記録<span class="sr-only">(current)</span></a>
-                    </li>
+                    <a class="nav-link" href="../htdocs/new_community.php">コミュニティ作成<span class="sr-only">(current)</span></a>                    </li>
                     <li class="nav-item active">
                     <a class="nav-link" href="#">コミュニティ一覧</a>
                     </li>
@@ -67,12 +66,12 @@
 
         <?php if (count($err_msg) !== 0){ ?>
         <?php foreach($err_msg as $value){ ?>
-        <p class="p-3 mb-2 bg-danger text-white"><?php print $value; ?></p>            
+            <br><p class="p-3 mb-2 bg-danger text-white"><?php print $value; ?></p>            
         <?php } }?>
     
         <?php if (count($scc_msg) !== 0){ ?>
         <?php foreach($scc_msg as $value){ ?>
-            <p class="p-3 mb-2 bg-success text-white"><?php print $value; ?></p>            
+            <br><p class="p-3 mb-2 bg-success text-white"><?php print $value; ?></p>            
         <?php } } ?>
 
         <?php }} ?>

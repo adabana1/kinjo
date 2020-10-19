@@ -22,7 +22,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                    <a class="nav-link" href="#">トレーニング記録<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../htdocs/new_community.php">コミュニティ作成<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                     <a class="nav-link" href="#">コミュニティ一覧</a>
@@ -49,22 +49,22 @@
 
         <!--コミュニティ一覧-->
         <form action="../htdocs/reply.php">
-        <div class="item_all">
-        <a class="hover" name="" href="../htdocs/reply.php?community_id=<?php print $value['community_id']?>">
-            <div class="community_item">
-                <div class="community_title">
-                    <p?>作成者：<?php print $value['user_name'] ?><br>
-                    作成日時：<?php print $value['created_at'] ?><br>
-                    エリア：<?php print $value['area'] ?><br>
-                    タイトル：<?php print $value['title'] ?></p>
-                </div>
+            <div class="item_all">
+                <a class="hover text-decoration-none" name="" href="../htdocs/reply.php?community_id=<?php print $value['community_id']?>">
+                    <div class="community_item">
+                        <div class="community_title">
+                            <p?>作成者：<?php print $value['user_name'] ?><br>
+                            作成日時：<?php print $value['created_at'] ?><br>
+                            エリア：<?php print $value['area'] ?><br>
+                            タイトル：<?php print $value['title'] ?></p>
+                        </div>
 
-                <div class="community_detail">
-                    <?php print $value['community_detail'] ?>
-                </div>
+                        <div class="community_detail">
+                            <?php print $value['community_detail'] ?>
+                        </div>
+                    </div>
+                </a>
             </div>
-        </a>
-        </div>
 
         </form>
 
