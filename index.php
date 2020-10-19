@@ -1,9 +1,9 @@
 <?php
 
 // 設定ファイル読み込み
-require_once '/include/conf/const.php';
+require_once 'include/conf/const.php';
 // 関数ファイル読み込み
-require_once '/include/model/function.php';
+require_once 'include/model/function.php';
 
 if ($link = get_db_connect()){
     
@@ -100,4 +100,4 @@ if ($link = get_db_connect()){
     
 }
 
-include_once '/include/view/view_user_create.php';
+include_once 'include/view/view_user_create.php';
