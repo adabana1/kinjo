@@ -9,7 +9,7 @@ session_start();
 
 if (isset($_SESSION['user_id']) === TRUE) {
    // ログイン済みの場合、ホームページへリダイレクト
-   header('Location: ../htdocs/home.php');
+   header('Location: ../home');
    exit;
 }
 // セッション変数からログインエラーフラグを確認
@@ -90,7 +90,7 @@ if (get_request_method() === 'POST') {
                
            } else {
            // ログイン済みユーザのホームページへリダイレクト
-           header('Location: home.php');
+           header('Location: ../home');
            exit;
            
            }
