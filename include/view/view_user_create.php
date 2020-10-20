@@ -20,13 +20,13 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                <a class="nav-link" href="../new_community/">コミュニティ作成<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="../new_community">コミュニティ作成<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                <a class="nav-link" href="../communities/">コミュニティ一覧</a>
+                <a class="nav-link" href="../communities">コミュニティ一覧</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="../logout/">ログアウト</a>
+                <a class="nav-link" href="../logout">ログアウト</a>
                 </li>
             </ul>
             </div>
@@ -74,7 +74,7 @@
                         </div>
                     </div>
                     <button class="btn btn-primary" type="submit">新規登録</button>
-                    <p>アカウントをお持ちですか？<a href="../login/">ログイン</a></p>
+                    <p>アカウントをお持ちですか？<a href="../login">ログイン</a></p>
                 </form>
 
             <?php if (count($err_msg) !== 0){ ?>
